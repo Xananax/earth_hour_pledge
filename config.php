@@ -1,7 +1,7 @@
 <?php
 	
 	
-$locale = require('locale.php');
+$locale = parse_ini_file('locale.ini',true);
 
 $conf = array(
 	'csv_file'	=>	'results.csv'
@@ -27,7 +27,7 @@ $conf = array(
 		,	'profession' =>	array('Textbox',array(
 				'longDesc'	=>	l('profession_help')
 			))
-		,	'more_info'	=>	array('Checkbox',array(l('yes')),array(
+		,	'more_info'	=>	array('Checkbox',array(l('yes_label')),array(
 				'longDesc'	=>	l('more_info_help')
 			))
 		)
@@ -63,7 +63,7 @@ $conf = array(
 		,	'phone_mobile'	=>	array('Phone',array(
 				'longDesc'	=>	l('phone_mobile_help')
 			))
-		,	'more_info'	=>	array('Checkbox',array(l('yes')),array(
+		,	'more_info'	=>	array('Checkbox',array(l('yes_label')),array(
 				'longDesc'	=>	l('more_info_help')
 			))
 		)
