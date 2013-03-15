@@ -16,7 +16,7 @@ if(isset($_POST["form"])){
 	if(Form::isValid('individual') || Form::isValid('company')){
 		$data = array_slice($_POST,0);
 		$row = array();
-		$goTo = '#'.$data['url'];
+		$goTo = $data['url'] ? '' : '#'.$data['url'];
 		if($data['honeypot']){
 			return false;
 		}
