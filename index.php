@@ -36,12 +36,25 @@
 		</div>
 		<div id="Main" class="container-fluid">
 			<div class="row-fluid">
-				<div class="hero-unit texts">
-					<?php if($is_processed): ?>
+				<div id="Form-Chooser" class="state-editor state-form hero-unit">
+					<?php if(!$is_processed): ?>
+						<p><?php echo l('body_form_please_fill') ?></p>
+						<h2><?php echo l('body_form_type') ?></h2>
+						<div>
+							<a href="#form-individual" class="btn btn-large btn-success">
+								<?php echo l('body_form_individual_button') ?>
+							</a>
+							<a href="#form-company" class="btn btn-large btn-success">
+								<?php echo l('body_form_company_button') ?>
+							</a>
+						</div>
+					<?php else: ?>
 						<div id="Thanks">
 							<h3><?php echo l('body_thank_you_for_submitting') ?></h3>
-						</div>
+						</div>				
 					<?php endif; ?>
+				</div>
+				<div class="hero-unit texts">
 					<?php require('chunks/body.php'); ?>
 				</div>
 			</div>
