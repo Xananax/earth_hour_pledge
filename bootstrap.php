@@ -70,11 +70,10 @@ function createForm($formName,$elements,$addDefaults = false){
 				:
 				new $className($label,'button',array_shift($props),array_shift($props))
 				;
-		}else if($className == 'Hidden'){
+		}else if($className == 'Hidden' || $className == 'Captcha'){
 			$className = $classRoot.$className;
 			$element = new $className($name,array_shift($props),array_shift($props),array_shift($props));			
-		}
-		else{
+		}else{
 			$className = $classRoot.$className;
 			$element = new $className($label,$name,array_shift($props),array_shift($props));
 		}
