@@ -2,11 +2,24 @@
 
 use PFBC\Form;
 
+if(!isset($_SESSION['lastSiteRequest'])){
+	$_SESSION['lastSiteRequest'] = time();
+	return false;
+}
+$last_session_time = $_SESSION['lastSiteRequest'];
+$current_session_time = time();
+$_SESSION['lastSiteRequest'] = $current_session_time;
+$refresh_delta = $current_session_time - $last_session_time;
+if($refresh_delta < 3){return false;}
+
 if(isset($_POST["form"])){
 	if(Form::isValid('individual') || Form::isValid('company')){
 		$data = array_slice($_POST,0);
 		$row = array();
 		$goTo = '#'.$data['url'];
+		if($data['honeypot']){
+			return false;
+		}
 		foreach($conf['columns'] as $c){
 			$row[$c] = array_key_exists($c, $data) ? $data[$c] : '';
 		}

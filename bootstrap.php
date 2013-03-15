@@ -76,8 +76,11 @@ function langLocale($str,$lng='en',$replacements=null,$asHTML=true){
 function createForm($formName,$elements,$addDefaults = false){
 	$form_defaults = array(
 		'form'	=>	array('Hidden',$formName)
+	,	'honeypot'	=> array('Textbox',array(
+			'class' => 'hidden'
+		))
 	,	'ok'	=>	array('CustomButton')
-	,	'cancel'	=>	array("CustomButton",array("onclick" => "history.go(-1);"))
+	//,	'cancel'	=>	array('CustomButton',array('onclick' => 'history.go(-1);'))
 	);
 	$classRoot = '\\PFBC\\Element\\';
 	if(!$elements){$elements = array();}

@@ -24,6 +24,7 @@ body {padding-top:0px;padding-bottom: 0px;}
 .partner{height:60px;width:auto;margin:5px;background:white;-webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .5);box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .5);}
 .main-partner{height:120px;}
 .bigLogo{float:left;margin-right:10px;}
+.hidden{display:none;}
 html[lang=ar] .bigLogo{float:right;margin-right:0;margin-left:10px;}
 html[lang=ar] #recaptcha_response_field{right:0;}
 /* Large desktop */
