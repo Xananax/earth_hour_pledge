@@ -3,6 +3,7 @@
 session_start();
 
 ini_set('default_charset', 'utf-8');
+setlocale(LC_ALL, array('ar_AE', 'ar_AE.iso88596', 'ar_AE.utf8', 'ar'));
 ini_set('display_errors',1);
 ini_set('display_startup_errors',1);
 error_reporting(-1);
