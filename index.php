@@ -22,7 +22,6 @@
 			<div class="navbar">
 				<div class="navbar-inner">
 					<div class="container-fluid">
-						<a class="brand" href="#"><?php echo l('title') ?></a>
 						<div id="Language-Chooser" class="state-editor state-lang navbar-text pull-right" dir="ltr">
 							<?php echo l('body_please_choose_your_language') ?>
 							<div class="btn-group">
