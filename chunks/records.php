@@ -18,7 +18,7 @@
 			?>
 		</td>
 		<td>
-			<i class="icon-<?php echo ($r['type']=='company' ? 'group':'user'); ?>"></i> <?php echo $r['type']; ?>
+			<i class="icon-<?php echo ($r['type']=='company' ? 'group':'user'); ?>"></i> <?php echo l($r['type']); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
