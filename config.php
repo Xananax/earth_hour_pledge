@@ -30,7 +30,7 @@ $conf = array(
 		,	'more_info'	=>	array('Checkbox',array(l('yes_label')),array(
 				'longDesc'	=>	l('more_info_help')
 			))
-		//,	'captcha'	=>	array('Captcha')
+		,	'captcha'	=>	array('Captcha')
 		)
 	,	'company' => array(
 			'type'	=>	array('Hidden','company')
@@ -67,7 +67,7 @@ $conf = array(
 		,	'more_info'	=>	array('Checkbox',array(l('yes_label')),array(
 				'longDesc'	=>	l('more_info_help')
 			))
-		//,	'captcha'	=>	array('Captcha')
+		,	'captcha'	=>	array('Captcha')
 		)
 	)
 ,	'columns' => array(
