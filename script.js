@@ -121,7 +121,7 @@ jQuery(function($){
 				scrollLeft: offset.left
 			});
 		}
-		$forms.not($form.slideDown('slow',callback)).slideUp();
+		$forms.not($form.slideDown('fast',callback)).slideUp();
 	}
 
 	$Window.on('hashchange',function(){
