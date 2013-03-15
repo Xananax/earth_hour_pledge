@@ -89,8 +89,8 @@
 		 			<a title="website" href="http://www.eso.org.om" target="_blank" data-toggle="tooltip"><i class="icon-link white"></i></a>
 		 			<a title="facebook" href="www.facebook.com/EnvironmentSocietyOfOman" target="_blank" data-toggle="tooltip"><i class="icon-facebook white"></i></a>
 		 			<a title="twitter" href="www.twitter.com/ESO_Oman_" target="_blank" data-toggle="tooltip"><i class="icon-twitter white"></i></a>
-		 			<a title="email" href="mailto:admin@eso.org.om" data-toggle="tooltip"><i class="icon-envelope white"></i> admin@eso.org.om</a>
-		 			<a title="phone" href="tel:+968 24790945" data-toggle="tooltip"><i class="icon-phone white"></i> +968 24790945</a>
+		 			<a title="email" href="mailto:admin@eso.org.om" data-toggle="tooltip"><i class="icon-envelope white"></i> <span>admin@eso.org.om</span></a>
+		 			<a title="phone" href="tel:+968 24790945" data-toggle="tooltip"><i class="icon-phone white"></i> <span>+968 24790945</span></a>
 		 		</div>
 		 	</div>
 		</div>

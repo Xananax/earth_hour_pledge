@@ -15,6 +15,7 @@ body {padding-top:0px;padding-bottom: 0px;}
 #Form-Chooser,
 #Thanks{font-size:150%;}
 #Footer{margin-bottom:0;}
+#Footer a{display:inline-block;}
 #Footer a i{margin-right:5px;}
 #Footer a:hover{color:white;text-decoration: none;}
 #Footer .container-fluid{margin-top:10px;}
