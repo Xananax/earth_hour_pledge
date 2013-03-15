@@ -1,6 +1,6 @@
 <script type="text/javascript">
         var disqus_shortname = 'omanearthhour';
-        var disqus_developer = 1;
+        //var disqus_developer = 1;
         (function() {
             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
             dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
