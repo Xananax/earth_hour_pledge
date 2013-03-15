@@ -20,7 +20,8 @@
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 		<script type="text/javascript" src="script.js"></script>
 		<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
-		<link rel="icon" href="favicon.ico">
+		<link rel="icon" href="/favicon.ico?v=2">
+		<link rel="shortcut icon" href="http://http://omanearthhour.org/favicon.ico?v=2" />
 	</head>
 	<body class="language-en">
 		<div id="Header">
