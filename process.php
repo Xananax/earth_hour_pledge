@@ -4,13 +4,17 @@ use PFBC\Form;
 
 if(!isset($_SESSION['lastSiteRequest'])){
 	$_SESSION['lastSiteRequest'] = time();
+	refresh();
 	return false;
 }
 $last_session_time = $_SESSION['lastSiteRequest'];
 $current_session_time = time();
 $_SESSION['lastSiteRequest'] = $current_session_time;
 $refresh_delta = $current_session_time - $last_session_time;
-if($refresh_delta < 2){return false;}
+if($refresh_delta < 2){
+	refresh();
+	return false;
+}
 
 if(isset($_POST["form"])){
 	if(Form::isValid('individual') || Form::isValid('company')){
