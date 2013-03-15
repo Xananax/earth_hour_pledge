@@ -1,7 +1,7 @@
 <?php
 	include('bootstrap.php');
 	$is_processed = require('process.php');
-	if($is_processed){refresh();}
+	if($is_processed){refresh($is_processed);}
 	$is_processed = has_messages();
 	$messages = $is_processed ? get_messages():false;
 ?>

@@ -6,6 +6,7 @@ if(isset($_POST["form"])){
 	if(Form::isValid('individual') || Form::isValid('company')){
 		$data = array_slice($_POST,0);
 		$row = array();
+		$goTo = '#'.$data['url'];
 		foreach($conf['columns'] as $c){
 			$row[$c] = array_key_exists($c, $data) ? $data[$c] : '';
 		}
@@ -13,15 +14,15 @@ if(isset($_POST["form"])){
 		foreach($records as $rec){
 			if($rec['email'] == $row['email']){
 				message(l('body_you_already_submitted'));
-				return true;
+				return $goTo;
 			}
 		}
 		write_csv($conf['csv_file'],array($row),!file_exists($conf['csv_file']));
 		message(l('body_thank_you_for_submitting'));
-		return true;
+		return $goTo;
 	}
 	message(l('body_thank_you_for_submitting'));
-	return true;
+	return $goTo;
 }
 
 return false;

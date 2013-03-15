@@ -16,6 +16,7 @@ jQuery(function($){
 	,	$Pane = $('html,body')
 	,	propSep = '/'
 	,	valueSep = '-'
+	,	$urlsInputs = $('form input[name="url"]');
 	;
 
 	function parseHash(hash){
@@ -68,6 +69,7 @@ jQuery(function($){
 		currentHash = objToHash(curr);
 		if('#'+currentHash!==location.hash){
 			listenToHash = false;
+			$urlsInputs.val(currentHash);
 			location.hash = currentHash;
 		}
 	}

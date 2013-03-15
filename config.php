@@ -31,6 +31,7 @@ $conf = array(
 				'longDesc'	=>	l('more_info_help')
 			))
 		,	'captcha'	=>	array('Captcha')
+		,	'url'	=>	array('Hidden','')
 		)
 	,	'company' => array(
 			'type'	=>	array('Hidden','company')
@@ -68,6 +69,7 @@ $conf = array(
 				'longDesc'	=>	l('more_info_help')
 			))
 		,	'captcha'	=>	array('Captcha')
+		,	'url'	=>	array('Hidden','')
 		)
 	)
 ,	'columns' => array(
