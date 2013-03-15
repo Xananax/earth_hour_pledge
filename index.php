@@ -26,8 +26,8 @@
 						<div id="Language-Chooser" class="state-editor state-lang navbar-text pull-right" dir="ltr">
 							<?php echo l('body_please_choose_your_language') ?>
 							<div class="btn-group">
-								<a href="#lang-en" class="btn active">English</a>
-								<a href="#lang-ar" class="btn">العربية</a>
+								<a href="#lang-en" class="btn" lang="en" dir="ltr">English</a>
+								<a href="#lang-ar" class="btn" lang="ar" dir="rtl">العربية</a>
 							</div>
 						</div>
 					</div>

@@ -1,5 +1,14 @@
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
 html[lang=en] .languages .language-ar{display:none;}
 html[lang=ar] .languages .language-en{display:none;}
+.language-ar{font-family: 'Droid Arabic Naskh', serif;}
+h1 .language-ar,
+h2 .language-ar,
+h3 .language-ar,
+h4 .language-ar,
+h5 .language-ar,
+h6 .language-ar{font-family: 'Droid Arabic Kufi', serif;font-weight:normal;}
 body {padding-top:0px;padding-bottom: 0px;}
 #Language-Chooser{display:inline-block;}
 #Footer a i,
