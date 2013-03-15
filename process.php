@@ -11,7 +11,7 @@ if(isset($_POST["form"])){
 			$row[$c] = array_key_exists($c, $data) ? $data[$c] : '';
 		}
 		if(isset($row['more_info']) && is_array($row['more_info'])){$row['more_info'] = 1;}
-		if(isset($row['website'])){
+		if(isset($row['website']) && $row['website']){
 			if (preg_match("#https?://#", $row['website']) === 0) {
     			$row['website'] = 'http://'.$row['website'];
 			}
