@@ -2,8 +2,6 @@
 	<thead>
 		<tr>
 			<td><?php echo l('name') ?></td>
-			<td><?php echo l('email') ?></td>
-			<td><?php echo l('profession') ?></td>
 			<td><?php echo l('type') ?></td>
 		</tr>
 	</thead>
@@ -20,18 +18,7 @@
 			?>
 		</td>
 		<td>
-			<?php
-				echo str_replace(array('@','.'), array(' AT ',' DOT '), $r['email']);
-			?>
-		</td>
-		<td>
-			<?php
-				if(isset($r['profession'])){echo $r['profession'];};
-				if(isset($r['position'])){echo ' '.$r['position'];};
-			?>
-		</td>
-		<td>
-			<?php echo $r['type'] ?>
+			<i class="icon-<?php echo ($r['type']=='company' ? 'group':'user'); ?>"></i> <?php echo $r['type']; ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

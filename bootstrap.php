@@ -20,6 +20,33 @@ use PFBC\View;
 $forms = array();
 $records = read_csv($conf['csv_file']);
 
+function message($m){
+	if(!isset($_SESSION['messages'])){$_SESSION['messages'] = array();}
+	$_SESSION['messages'][] = $m;
+}
+
+function has_messages(){
+	return (isset($_SESSION['messages']) && count($_SESSION['messages']) > 0);
+}
+
+function get_messages(){
+	$ret = array();
+	if(isset($_SESSION['messages'])){
+		foreach($_SESSION['messages'] as $k=>$m){
+			$ret[] = $m;
+			unset($_SESSION['messages'][$k]);
+		}
+	}
+	return $ret;
+}
+
+function refresh(){
+	$host = $_SERVER['HTTP_HOST'];
+	$uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+	header("Location: http://$host$uri/");
+	exit;
+}
+
 function l($str,$replacements=null,$asHTML = true,$lngs = array()){
 	global $locale;
 	if(!$lngs){$lngs=array_keys($locale);}
@@ -37,6 +64,9 @@ function langLocale($str,$lng='en',$replacements=null,$asHTML=true){
 		$str = array_key_exists($str, $locale[$lng]) ? $locale[$lng][$str] : $str;
 	}
 	$dir = ($lng == 'ar')?'rtl':'ltr';
+	if($replacements){
+		$str = str_replace(array_keys($replacements), $replacements, $str);
+	}
 	return $asHTML ? "<span class=\"language language-{$lng}\" dir=\"$dir\" lang=\"$lng\">$str</span>" : $str;
 }
 

@@ -20,7 +20,8 @@ body {padding-top:0px;padding-bottom: 0px;}
 #Footer .container-fluid{margin-top:10px;}
 .container-fluid{margin-right: auto;margin-left: auto;max-width: 1000px;}
 .hero-unit.texts{background:#50abe3;color:#FFF;}
-.partner{height:120px;width:auto;margin:5px;background:white;-webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .5);box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .5);}
+.partner{height:60px;width:auto;margin:5px;background:white;-webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .5);box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .5);}
+.main-partner{height:120px;}
 .bigLogo{float:left;margin-right:10px;}
 html[lang=ar] .bigLogo{float:right;margin-right:0;margin-left:10px;}
 html[lang=ar] #recaptcha_response_field{right:0;}

@@ -1,6 +1,9 @@
 <?php
 	include('bootstrap.php');
 	$is_processed = require('process.php');
+	if($is_processed){refresh();}
+	$is_processed = has_messages();
+	$messages = $is_processed ? get_messages():false;
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -26,7 +29,7 @@
 						<div id="Language-Chooser" class="state-editor state-lang navbar-text pull-right" dir="ltr">
 							<?php echo l('body_please_choose_your_language') ?>
 							<div class="btn-group">
-								<a href="#lang-en" class="btn" lang="en" dir="ltr">English</a>
+								<a href="#lang-en" class="btn active" lang="en" dir="ltr">English</a>
 								<a href="#lang-ar" class="btn" lang="ar" dir="rtl">العربية</a>
 							</div>
 						</div>
@@ -49,8 +52,10 @@
 							</a>
 						</div>
 					<?php else: ?>
-						<div id="Thanks">
-							<h3><?php echo l('body_thank_you_for_submitting') ?></h3>
+						<div id="Messages">
+							<?php foreach($messages as $message): ?>
+								<h3><?php echo $message; ?></h3>
+							<?php endforeach; ?>
 						</div>				
 					<?php endif; ?>
 				</div>
@@ -62,8 +67,17 @@
 				<?php require('chunks/forms.php'); ?>
 			</div>
 			<div class="row-fluid" id="Records">
-				<h3><?php echo l('body_list_title') ?> </h3>
-				<?php require('chunks/records.php'); ?>
+				<div class="span6">
+					<h2><?php echo l('records_count',array('%count%'=>count($records))); ?></h2>
+					<h3><?php echo l('body_list_title') ?></h3>
+					<?php require('chunks/records.php'); ?>
+				</div>
+				<div class="span6">
+					<h3><?php echo l('body_comments') ?></h3>
+					<div class="disqus" id="disqus_thread">
+						<?php require('chunks/disqus.php'); ?>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div id="Footer" class="navbar navbar-inverse">
