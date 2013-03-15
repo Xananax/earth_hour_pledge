@@ -8,7 +8,7 @@ h2 .language-ar,
 h3 .language-ar,
 h4 .language-ar,
 h5 .language-ar,
-h6 .language-ar{font-family: 'Droid Arabic Kufi', serif;font-weight:normal;}
+h6 .language-ar{font-family: 'Droid Arabic Kufi', serif;line-height:1.2;}
 body {padding-top:0px;padding-bottom: 0px;}
 #Language-Chooser{display:inline-block;}
 #Footer a i,
@@ -21,6 +21,9 @@ body {padding-top:0px;padding-bottom: 0px;}
 .container-fluid{margin-right: auto;margin-left: auto;max-width: 1000px;}
 .hero-unit.texts{background:#50abe3;color:#FFF;}
 .partner{height:120px;width:auto;margin:5px;background:white;-webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .5);box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .5);}
+.bigLogo{float:left;margin-right:10px;}
+html[lang=ar] .bigLogo{float:right;margin-right:0;margin-left:10px;}
+html[lang=ar] #recaptcha_response_field{right:0;}
 /* Large desktop */
 @media (min-width: 1200px) {
 	.container-fluid{max-width:1000px;}
