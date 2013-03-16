@@ -4,19 +4,19 @@ use PFBC\Form;
 
 if(!isset($_SESSION['lastSiteRequest'])){
 	$_SESSION['lastSiteRequest'] = time();
-	refresh();
-	return false;
-}
-$last_session_time = $_SESSION['lastSiteRequest'];
-$current_session_time = time();
-$_SESSION['lastSiteRequest'] = $current_session_time;
-$refresh_delta = $current_session_time - $last_session_time;
-if($refresh_delta < 2){
-	refresh();
-	return false;
 }
 
 if(isset($_POST["form"])){
+
+	$last_session_time = $_SESSION['lastSiteRequest'];
+	$current_session_time = time();
+	$_SESSION['lastSiteRequest'] = $current_session_time;
+	$refresh_delta = $current_session_time - $last_session_time;
+	if($refresh_delta < 2){
+		refresh();
+		return false;
+	}
+
 	if(Form::isValid('individual') || Form::isValid('company')){
 		$data = array_slice($_POST,0);
 		$row = array();
@@ -39,11 +39,14 @@ if(isset($_POST["form"])){
 				return $goTo;
 			}
 		}
-		write_csv($conf['csv_file'],array($row),!file_exists($conf['csv_file']));
-		message(l('body_thank_you_for_submitting'));
+		$success = write_csv($conf['csv_file'],array($row),!file_exists($conf['csv_file']));
+		if($success){
+			message(l('body_thank_you_for_submitting'));
+		}else{
+			message(l('body_submission_error'));
+		}
 		return $goTo;
 	}
-	message(l('body_thank_you_for_submitting'));
 	return $goTo;
 }
 

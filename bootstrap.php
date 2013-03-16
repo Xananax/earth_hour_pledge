@@ -42,9 +42,10 @@ function get_messages(){
 	return $ret;
 }
 
-function refresh($append){
+function refresh($append=null){
 	$host = $_SERVER['HTTP_HOST'];
 	$uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+	if($uri=='index.php'){$uri='';}
 	header("Location: http://$host$uri/$append");
 	exit;
 }
