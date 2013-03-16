@@ -22,6 +22,10 @@ use PFBC\View;
 $forms = array();
 $records = read_csv($conf['csv_file']);
 
+if($records && count($records)){
+	$records = array_reverse($records);
+}
+
 function message($m){
 	if(!isset($_SESSION['messages'])){$_SESSION['messages'] = array();}
 	$_SESSION['messages'][] = $m;
