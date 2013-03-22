@@ -33,12 +33,14 @@ if(isset($_POST["form"])){
     			$row['website'] = 'http://'.$row['website'];
 			}
 		}
+		/**
 		foreach($records as $rec){
 			if($rec['email'] == $row['email']){
 				message(l('body_you_already_submitted'));
 				return $goTo;
 			}
 		}
+		**/
 		$success = write_csv($conf['csv_file'],array($row),!file_exists($conf['csv_file']));
 		if($success){
 			message(l('body_thank_you_for_submitting'));
